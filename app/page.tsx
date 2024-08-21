@@ -11,16 +11,17 @@ export default function Home() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://api.pentacle.xyz/api/projects?pagination%5BpageSize%5D=1000', {
+      const response = await fetch('/api/fetchProjects', {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_WELCOME_ONCHAIN_API_KEY}`, // Use Bearer token for authentication
           'Content-Type': 'application/json',
         },
       });
+
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
+
       const result = await response.json();
 
       if (result.data && result.data.length > 0) {
