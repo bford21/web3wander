@@ -11,7 +11,7 @@ export default function Home() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://api.pentacle.xyz/api/projects', {
+      const response = await fetch('https://api.pentacle.xyz/api/projects?pagination%5BpageSize%5D=1000', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${process.env.NEXT_PUBLIC_WELCOME_ONCHAIN_API_KEY}`, // Use Bearer token for authentication
