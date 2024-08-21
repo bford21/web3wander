@@ -46,13 +46,13 @@ export default function Home() {
           {/* Banner */}
           <div className="w-full bg-white shadow-lg py-4 px-8 flex items-center justify-between border-b-2 border-gray-700">
             <h1 className="text-3xl font-bold text-black">
-              Web3 Wander
+              🚶‍♂️  <a href="/">Web3 Wander</a>
             </h1>
             <button
               onClick={handleClick}
-              className="bg-blue-500 text-white py-2 px-6 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
+              className="text-white py-2 px-6 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 bg-gradient-to-r from-blue-500 to-green-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-green-600"
             >
-              {loading ? 'Loading...' : 'Start Wandering'}
+              {loading ? 'Loading...' : 'Wander'}
             </button>
           </div>
 
@@ -67,9 +67,9 @@ export default function Home() {
         </>
       ) : (
         // When no site is being rendered (full-screen centered content)
-        <div className="flex flex-col items-center justify-center flex-1">
+        <div className="flex flex-col items-center justify-center flex-1 relative">
           <h1 className="text-6xl font-bold text-black mb-8">
-            Web3 Wander
+            🚶‍♂️ Web3 Wander
           </h1>
           <button
             onClick={handleClick}
@@ -77,6 +77,12 @@ export default function Home() {
           >
             {loading ? 'Loading...' : 'Start Wandering'}
           </button>
+          {/* Fixed at the bottom */}
+          <div className="absolute bottom-4 w-full text-center">
+            <p className="text-black">
+              Powered By <a href="https://www.welcomeonchain.xyz/" className="text-blue-500 underline">Welcome Onchain</a> | <a href="https://github.com/bford21/web3wander" className="text-blue-500 underline">Github</a>
+            </p>
+          </div>
         </div>
       )}
     </main>
