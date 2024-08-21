@@ -45,7 +45,7 @@ export default function Home() {
         <>
           {/* Banner */}
           <div className="w-full bg-white shadow-lg py-4 px-8 flex items-center justify-between border-b-2 border-gray-700">
-            <h1 className="text-3xl font-bold text-black">
+            <h1 className="text-3xl font-bold text-black font-mono">
               🚶‍♂️  <a href="/">Web3 Wander</a>
             </h1>
             <button
@@ -68,7 +68,7 @@ export default function Home() {
       ) : (
         // When no site is being rendered (full-screen centered content)
         <div className="flex flex-col items-center justify-center flex-1 relative">
-          <h1 className="text-6xl font-bold text-black mb-8">
+          <h1 className="text-6xl font-bold text-black mb-8 font-mono">
             🚶‍♂️ Web3 Wander
           </h1>
           <button
